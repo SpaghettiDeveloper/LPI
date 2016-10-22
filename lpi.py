@@ -16,15 +16,46 @@
 * LINUX POST INSTALLER - Ver. 1.0 *
 *---------------------------------*
 
-Autore: Stefano Peris <SpaghettiDeveloper>
-eMail: stefano.peris.dev@gmail.com
+- Autore: Stefano Peris <SpaghettiDeveloper>
+- eMail: stefano.peris.dev@gmail.com
 
 """
+
+## IMPORTANTE:
 
 ## Se necessario, dare i permessi di esecuzione al fine con: chmod +x lpi.py
 ## Per generare il bytecode "*.pyc", da terminale scrivere il seguente comando: python -c "import lpi.py"
 
 import os
+
+
+def Clearscreen():
+      os.system('clear')
+
+def Menu():
+      Clearscreen()
+
+      print("*---------------------------------*")
+      print("* LINUX POST INSTALLER - Ver. 1.0 *")
+      print("*---------------------------------*")
+      print("")
+      print("- Autore: Stefano Peris <SpaghettiDeveloper>")
+      print("- eMail: stefano.peris.dev@gmail.com")
+      print("")
+      print("---------- MENU ----------")
+      print("")
+      print("")
+      print("")
+      print("[1] Python 3.x - pip + Pygame")
+      print("[2] Midnight Commander")
+      print("[3] Vim")
+      print("[4] Git")
+      print("[5] Wget")
+      print("[6] Htop")
+      print("[7] Zim")
+      print("[8] Build Essential")
+      print("[9] Cmake")
+      print("[q] Esci")
 
 #+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++#
 
@@ -76,7 +107,7 @@ os.system("sudo apt-get install -y zim")
 
 #+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++#
 
-# BUILD ESSENTIALS - Collezione di compilatori e librerie.
+# BUILD ESSENTIAL - Collezione di compilatori e librerie.
 
 os.system("sudo apt-get install -y build-essential")
 
