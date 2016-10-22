@@ -1,4 +1,6 @@
 // Inserire le impostazioni in questo file per sovrascrivere quelle utente e predefinite.
+// - Grandezza font
+// - Configurazione tabulazione per codice Python
 {
     "editor.fontSize": 16,
     "editor.tabSize": 4
