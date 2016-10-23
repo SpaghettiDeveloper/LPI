@@ -26,96 +26,83 @@
 ## Se necessario, dare i permessi di esecuzione al fine con: chmod +x lpi.py
 ## Per generare il bytecode "*.pyc", da terminale scrivere il seguente comando: python -c "import lpi.py"
 
+# Librerie e moduli
+
 import os
 
+# Variabili globali
+
+opzione = 0
+
+# Pulisce lo schermo ad ogni iterazione
 
 def Clearscreen():
       os.system('clear')
 
-def Menu():
-      Clearscreen()
 
-      print("*---------------------------------*")
-      print("* LINUX POST INSTALLER - Ver. 1.0 *")
-      print("*---------------------------------*")
-      print("")
-      print("- Autore: Stefano Peris <SpaghettiDeveloper>")
-      print("- eMail: stefano.peris.dev@gmail.com")
-      print("")
-      print("---------- MENU ----------")
-      print("")
-      print("")
-      print("")
-      print("[1] Python 3.x - pip + Pygame")
-      print("[2] Midnight Commander")
-      print("[3] Vim")
-      print("[4] Git")
-      print("[5] Wget")
-      print("[6] Htop")
-      print("[7] Zim")
-      print("[8] Build Essential")
-      print("[9] Cmake")
-      print("[q] Esci")
 
-#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++#
+while opzione:
+      
+      print("""
+      *---------------------------------*
+      * LINUX POST INSTALLER - Ver. 1.0 *
+      *---------------------------------*
+      
+      +------------------ ABOUT -------------------+
+      + Autore: Stefano Peris <SpaghettiDeveloper> +
+      + eMail: stefano.peris.dev@gmail.com         +
+      +--------------------------------------------+
+      
+      +------------------------+
+      +--------- MENU ---------+
+      +------------------------+
 
-# Python 3.x - Gestore moduli pip + Pygame.
 
-os.system("sudo apt-get install python3-pip")
+      [1] Python 3.x - pip + Pygame
+      [2] Midnight Commander
+      [3] Vim
+      [4] Git
+      [5] Wget
+      [6] Htop
+      [7] Zim
+      [8] Build Essential
+      [9] Cmake
+      [q] Esci
+      """)
 
-os.system("python3 -m pip install pygame")
+      opzione = input("Digita l'opzione desiderata > ")
 
-#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++#
+      if opzione == "1":
+            os.system("sudo apt-get install python3-pip")
+            os.system("python3 -m pip install pygame")
 
-# MIDNIGHT COMMANDER - File manager per sistemi Unix e Unix-like.
+      elif opzione == "2":
+            os.system("sudo apt-get install -y mc")
 
-os.system("sudo apt-get install -y mc")
+      elif opzione == "3":
+            os.system("sudo apt-get install -y vim")
 
-#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++#
+      elif opzione == "4":
+            os.system("sudo apt-get install -y git")
 
-# VIM - Editor di testo modale.
+      elif opzione == "5":
+            os.system("sudo apt-get install -y wget")
 
-os.system("sudo apt-get install -y vim")
+      elif opzione == "6":
+            os.system("sudo apt-get install -y htop")
 
-#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++#
+      elif opzione == "7":
+            os.system("sudo apt-get install -y zim")
 
-# GIT - software di controllo versione distribuito utilizzabile da interfaccia a riga di comando.
+      elif opzione == "8":
+            os.system("sudo apt-get install -y build-essential")
 
-os.system("sudo apt-get install -y git")
+      elif opzione == "9":
+            os.system("sudo apt-get install -y cmake")
 
-#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++#
-
-# WGET - Gestore di download libero, multipiattaforma. Supporta i protocolli HTTP, HTTPS e FTP.
-
-os.system("sudo apt-get install -y wget")
-
-#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++#
-
-# HTOP - visualizzatore di processi basato su ncurses, simile a top,
-# ma permette di scorrere l'elenco verticalmente ed orizzontalmente
-# per vedere tutti i processi e la loro intera riga di comando.
-
-os.system("sudo apt-get install -y htop")
-
-#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++#
-
-# ZIM - Editor di wiki che consente di scrivere in modo visuale ipertesti con un minimo di formattazione,
-# di inserire immagini e di esportare il tutto in html direttamente sul browser di sistema,
-# non richiede installazioni di alcun software aggiuntivo, è molto leggero e stabile. 
-
-os.system("sudo apt-get install -y zim")
-
-#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++#
-
-# BUILD ESSENTIAL - Collezione di compilatori e librerie.
-
-os.system("sudo apt-get install -y build-essential")
-
-#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++#
-
-# CMAKE - Software libero multipiattaforma per l'automazione dello sviluppo.
-
-os.system("sudo apt-get install -y cmake")
-
-#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++#
+      elif opzione == "10":
+            os.system("sudo apt-get install -y gparted")
+      
+      elif opzione == "q":
+            exit()
 
