@@ -1,6 +1,6 @@
 // Inserire le impostazioni in questo file per sovrascrivere quelle utente e predefinite.
 
-// - Grandezza font
+// Grandezza font
 
 {
     "editor.fontSize": 16
