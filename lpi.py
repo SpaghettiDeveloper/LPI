@@ -106,3 +106,6 @@ while opzione:
       elif opzione == "q":
             exit()
 
+      else:
+            null
+
