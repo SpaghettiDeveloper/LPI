@@ -66,7 +66,7 @@ while opzione:
       [6] Htop
       [7] Zim
       [8] Build Essential
-      [9] Cmake
+      [9] Geany
       [q] Esci
       """)
 
@@ -98,7 +98,7 @@ while opzione:
             os.system("sudo apt-get install -y build-essential cmake libsdl1.2-dev libboost-dev")
 
       elif opzione == "9":
-            os.system("sudo apt-get install -y cmake")
+            os.system("sudo apt-get install -y geany")
 
       elif opzione == "10":
             os.system("sudo apt-get install -y gparted")
