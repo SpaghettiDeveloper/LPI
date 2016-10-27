@@ -95,7 +95,7 @@ while opzione:
             os.system("sudo apt-get install -y zim")
 
       elif opzione == "8":
-            os.system("sudo apt-get install -y build-essential")
+            os.system("sudo apt-get install -y build-essential cmake libsdl1.2-dev libboost-dev")
 
       elif opzione == "9":
             os.system("sudo apt-get install -y cmake")
